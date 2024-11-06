@@ -37,7 +37,7 @@ $ npm start
 $ npm run dev
 ```
 
-2. ローカルサーバー（デフォルトでhttp://localhost:3000）にアクセスしてください。
+2. ローカルサーバー（デフォルトで`http://localhost:3000`）にアクセスしてください。
 
 ### プロジェクト構成 (Project Structure)
 
