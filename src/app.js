@@ -7,6 +7,8 @@ const userRouter = require("./routes/user");
 
 const PORT = 3000;
 
+app.use(mylogger);
+
 // app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views'));
@@ -25,6 +27,10 @@ app.use("/user", userRouter);
 // app.use("/product", productRouter);
 
 // ミドルウェア
+function mylogger(req, res, next) {
+  console.log(req.originalUrl);
+  next();
+};
 
 
 app.listen(PORT, () => console.log("サーバーが起動しました。"));
