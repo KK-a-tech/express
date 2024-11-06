@@ -1,10 +1,15 @@
 const express = require("express");
+
 const app = express();
+const path = require('path');
+
 const userRouter = require("./routes/user");
+
 const PORT = 3000;
 
 // app.use(express.static("public"));
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
 app.get("/", (req, res) => {
   // console.log("hello express");
   // res.send("<h1>こんにちは</h1>");
